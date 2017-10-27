@@ -2,7 +2,7 @@
   "name": "studio-frontpage",
   "version": "1.0.0",
   "description": "this is a website for a graphic studio",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
