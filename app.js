@@ -29,7 +29,7 @@ app.use('/', express.static('app', options));
 
 server.listen(3000, 'localhost');
 server.on('listening', function() {
-    console.log('Express server started on port %s at %s', server.address().port, server.address().address);
+ //   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 });
 
 app.get('/', function(req, res) {
@@ -57,3 +57,7 @@ app.createServer(function(request, response) {
 */
 
 
+process.on('uncaughtException', function (err) {
+ // console.log(err);
+  fs.writeFileSync("exception.txt", err, "utf8");
+})
