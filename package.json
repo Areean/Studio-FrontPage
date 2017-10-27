@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Areean/Studio-FrontPage/issues"
   },
-  "homepage": "https://github.com/Areean/Studio-FrontPage#readme"
+  "homepage": "https://github.com/Areean/Studio-FrontPage#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
