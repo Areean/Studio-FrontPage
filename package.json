@@ -1,0 +1,22 @@
+{
+  "name": "studio-frontpage",
+  "version": "1.0.0",
+  "description": "this is a website for a graphic studio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Areean/Studio-FrontPage.git"
+  },
+  "keywords": [
+    "studiovista"
+  ],
+  "author": "Amir Tavakoli, Javad Tavakoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Areean/Studio-FrontPage/issues"
+  },
+  "homepage": "https://github.com/Areean/Studio-FrontPage#readme"
+}
