@@ -1,15 +1,24 @@
-let express=require('express'),
-path=require('path'),
-bodyParser=require('body-parser');
+const app = require('http');
+
+app.createServer(function(request, response) {
+  response.writeHead(200, {'Content-Type': 'text/html'});
+  response.end('<H1>Hello World!</H1>');
+  
+}).listen(process.env.PORT);
+
+
+//let express=require('express'),
+//path=require('path'),
+//bodyParser=require('body-parser');
 //creatign an express app 
 
-let app =express();
-let router = express.Router();
+//let app =express();
+
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+//app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
-app.use(bodyParser.json())
+//app.use(bodyParser.json())
 
 var options = {
   dotfiles: 'ignore',
