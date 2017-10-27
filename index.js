@@ -1,8 +1,10 @@
 let express=require('express'),
- path=require('path'),
- bodyParser=require('body-parser');
+path=require('path'),
+bodyParser=require('body-parser');
 //creatign an express app 
-var app =express();
+
+let app =express();
+let router = express.Router();
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -31,7 +33,7 @@ app.use('/', express.static('app', options));
 let server = app.listen(8081, function () {
   let host = server.address().address;
   let port = server.address().port;
-
+  
   console.log('my app is listening at http://%s:%s', host, port);
 });
 
@@ -39,10 +41,16 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/index.html'));
   
 });
+
+router.get('/', function(req, res){
+  res.render('index', {
+    title: 'Home'
+  });
+});
 app.get('*', function(req, res) {
   res.writeHead(302, {
     'Location': '/'
-    
   });
+  //res.redirect('your/404/path.html');
   res.end();
-  });
+});
