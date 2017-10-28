@@ -1,3 +1,17 @@
+app = require('http');
+
+
+app.createServer(function(request, response) {
+  response.writeHead(200, {'Content-Type': 'text/html'});
+
+  response.end('<H1>Hello World!</H1>');
+  }).listen(8000);
+  console.log('Server running at http://127.0.0.1:8000');
+
+/*
+process.env.PORT
+var app = express();
+var server = http.createServer(app);
 var express=require('express'),
 compression = require('compression'),
 path=require('path'),
@@ -29,7 +43,7 @@ app.use('/', express.static('app', options));
 
 server.listen(3000, 'localhost');
 server.on('listening', function() {
- //   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
+//   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 });
 
 app.get('/', function(req, res) {
@@ -44,7 +58,7 @@ app.get('*', function(req, res) {
   res.end();
 });
 
-
+*/
 /*
 *
 *
@@ -56,8 +70,3 @@ app.createServer(function(request, response) {
   }).listen(process.env.PORT);
 */
 
-
-process.on('uncaughtException', function (err) {
- // console.log(err);
-  fs.writeFileSync("exception.txt", err, "utf8");
-})
