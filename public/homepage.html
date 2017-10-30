@@ -1,32 +1,172 @@
-<!doctype html>
-<html>
-<head>
+<!DOCTYPE html>
+<html><head>
         <meta charset="utf-8">
         <title>Studio Vista | under construction</title>
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
-        <div class="row" >
-                <div class="col-md-12" style="height:10px; direction:ltr; text-align:center; margin-top:50px;">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="./images/favicon.png" type="image/png" />
+        <style>
+                body, html {
+                        height: 100%;
+                        margin: 0;
+                        font: 400 15px/1.8 "Lato", sans-serif;
+                        color: #777;
+                }
+                
+                .bgimg-1, .bgimg-2, .bgimg-3 {
+                        position: relative;
+                        opacity: 0.65;
+                        background-attachment: fixed;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
                         
+                }
+                .bgimg-1 {
+                        background-image: url("./images/banner.jpg");
+                        min-height: 100%;
+                }
+                
+                .bgimg-2 {
+                        background-image: url("images/company.jpg");
+                        min-height: 400px;
+                }
+                
+                .bgimg-3 {
+                        background-image: url("images/knowledge.jpg");
+                        min-height: 400px;
+                }
+                
+                .caption {
+                        position: absolute;
+                        left: 0;
+                        top: 30%;
+                        width: 100%;
+                        text-align: center;
+                        color: #000;
+                }
+                
+                .caption span.border {
+                        background-color: #111;
+                        color: #fff;
+                        padding: 18px;
+                        font-size: 25px;
+                        letter-spacing: 10px;
+                }
+                
+                h3 {
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        font: 20px "Lato", sans-serif;
+                        color: #111;
+                }
+                
+                a {
+                        color:black;
+                }
+                
+                
+                
+                #corner {
+                        
+                        border-radius: 5px 5px;
+                        background: black;
+                        color:white;
+                        padding: 3px; 
+                        font-size: 10pt;
+                        display: inline;
+                } 
+                
+                
+                /* Turn off parallax scrolling for tablets and phones */
+                @media only screen and (max-device-width: 1024px) {
+                        .bgimg-1, .bgimg-2, .bgimg-3 {
+                                background-attachment: scroll;
+                        }
+                }
+        </style>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></head>
+        <body>
+                
+                <div class="bgimg-1">
+                        <div class="caption">
+                                <img class="border" src="/images/StudioVista.png" alt="logo" style="width:90px;">
+                                <h1 class="border" style="font-size:42pt;"> Studio Vista</h1>
+                                <nav style="color:black; margin-top:90px;">
+                                        <a href='#aboutUs' class="btn">
+                                                About Us
+                                        </a>
+                                        .
+                                        <a href='#ourTeam' class="btn">
+                                                Our Team
+                                        </a>
+                                        .
+                                        <a href='#prof' class="btn">
+                                                Our Profession
+                                        </a>
+                                        .
+                                        <a href='underconstruction.html' class="btn">
+                                                Learning Courses  <p id="corner">Register</p>
+                                        </a>
+                                        .
+                                        
+                                        <a href='#contactUs' class="btn">
+                                                Contact Us
+                                        </a>
+                                </nav>
+                                <!-- <span class="border">SCROLL DOWN</span> -->
+                        </div>
                 </div>
-        </div>
-        <hr/>
-        <div class="row" >
-                <div class="col-md-12" style="background-image: url(./images/banner.jpg);  direction:ltr; text-align:center; padding:100px;">
-                        <h1>Home Page</h1>
-                        <p>This page is under Construction... Please try later.</p>
-                        <button onclick="window.location.href='/index.html'" class="btn" style="color:white; background-color:black;">
-                                Back to Home
-                        </button>
-                        <a href="#">Home</a>
+                
+                <div id="aboutUs" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+                        <h3 style="text-align:center;">About Us</h3>
+                        <p>
+                                Studio Vista is an Design Agency! Sometimes it's hard to find the inspiration to create a unique work of art for a client. One thing that you can do to help open up your creative mind is to put yourself in the customer's shoes. What would persuade you (as a customer) to buy the service or product? Why are you buying it (is it a need or a want)? The one and only mission that a graphic design has is to sell the client's service or product (they act like visual salesmen). So if you can come up with an idea which would compel you (yourself) to buy, then you are definitely on the right track.
+                                You can also look at how past graphic designers have dealt with similar products or services, and their creative work may spark some new ideas in you. Doodle design ideas over and over again until a solid design starts to show itself.
+                        </p>
                 </div>
-        </div>
-        <hr/>
-        <div class="row"  >
-                <div class="col-md-12" style="margin-top:50px; height:20%; direction:ltrrtl; text-align:center; font-size:10pt;"> 
-                        Vista Radman Arian &#169; 2015,  All rights Reserved.
+                
+                <div id="ourTeam" class="bgimg-2">
+                        <div class="caption">
+                                <span class="border" style="background-color:transparent;font-size:25px;color: #000;">Our Team</span>
+                                
+                        </div>
                 </div>
-        </div>
-</body>
-</html>
+                
+                <div style="position:relative;">
+                        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                                <!--    <p>
+                                        Azarakhsh Shali | Niloufar Safari | Mohammad Kankash | Amir Tavakoli | AmirAli Majidi | Javad Tavakoli
+                                        <br>
+                                        Marjan Torkian | Sheida Soleimani | Rahele Soleimani | Faezeh Rajayee | Ehsan Abbasloo | Narges Amini
+                                </p>  -->
+                        </div>
+                </div>
+                
+                <div id="prof" class="bgimg-3">
+                        <div  class="caption">
+                                <span class="border" style="background-color:transparent;font-size:25px;color: #000;">Our Profession</span>
+                                <p class="border" style="background-color:transparent;font-size:32px;color: #000;">We Gathered what you Need.</p>
+                        </div>
+                </div>
+                
+                <div style="position:relative;">
+                        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                                <!--         <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+                                -->
+                        </div>
+                </div>
+                
+                <div id="contactUs" class="bgimg-1">
+                        <div class="caption">
+                                <i class="fa fa-refresh fa-spin"></i>
+                                <p class="border" style="background-color:transparent;font-size:19px;color: #000;">Feel Free to Call Us:</p>
+                                <p class="border" style="background-color:transparent;font-size:39px;color: #000;"> <i class="fa fa-home" style="font-size:48px;"></i> +98 31 3234 3477 </p>
+                                        <p class="border" style="background-color:transparent;font-size:39px;color: #000;"> <i class="fa fa-phone" style="font-size:48px;"></i> +98 903 371 3701</p>
+                                        <span class="border" style="background-color:transparent;font-size:15px;color: #000;"> <i class="fa fa-envelope-o " style="font-size:12px;"></i>      info@studiovista.ir</span>
+                                </div>
+                        </div>
+                        
+                        
+                </body></html>

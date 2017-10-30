@@ -1,55 +1,28 @@
-app = require('http');
-
-
-app.createServer(function(request, response) {
-  response.writeHead(200, {'Content-Type': 'text/html'});
-
-  response.end('<H1>Hello World!</H1>');
-  }).listen(8000);
-  console.log('Server running at http://127.0.0.1:8000');
-
-/*
-process.env.PORT
+var express = require('express'),
 var app = express();
-var server = http.createServer(app);
-var express=require('express'),
-compression = require('compression'),
-path=require('path'),
-bodyParser=require('body-parser'),
-http = require('http');
+var port = process.env.port || 3000;
 
-var options = {
-  dotfiles: 'ignore',
-  etag: false,
-  extensions: ['htm', 'html'],
-  index: false,
-  maxAge: '1d',
-  redirect: false,
-  setHeaders: function (res, path, stat) {
-    res.set('x-timestamp', Date.now())
-  }
-}
+//app.set('/', __dirname + '/public');
+app.use('/images',express.static( 'public/images'));
 
-var app = express();
-var server = http.createServer(app);
+app.get('/', function(req, res,next) {
+  res.sendFile(path.join(__dirname + '/public/homepage.html'));
 
-//parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
-app.use(bodyParser.json())
-// use public folder
-app.use(express.static('public', options))
-app.use('/', express.static('app', options));
-
-server.listen(3000, 'localhost');
-server.on('listening', function() {
-//   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
-});
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
   });
 
+app.listen(port, function () {
+    console.log('Example app listening on port 3000!')
+})
+
+// use public folder
+//app.use(express.static('public'))
+//app.use('/', express.static('app'));
+//app.use(express.static(path.resolve('./public')));
+//app.use(express.static(__dirname + 'public/'));
+
+//app.use(express.static('public'));
+
+/*
 app.get('*', function(req, res) {
   res.writeHead(302, {
     'Location': '/'
@@ -57,8 +30,9 @@ app.get('*', function(req, res) {
   //res.redirect('your/404/path.html');
   res.end();
 });
-
 */
+//process.env.PORT
+
 /*
 *
 *
@@ -70,3 +44,34 @@ app.createServer(function(request, response) {
   }).listen(process.env.PORT);
 */
 
+/*
+var express = require('express'),
+path=require('path');
+var app = express();
+
+
+
+app.listen(process.env.PORT, function () {
+  //console.log('Example app listening on port 3000!')
+})
+
+// use public folder
+//app.use(express.static('public'))
+//app.use('/', express.static('app'));
+
+
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/homepage.html'));
+  });
+
+app.get('*', function(req, res) {
+  res.writeHead(302, {
+    'Location': '/'
+  });
+  //res.redirect('your/404/path.html');
+  res.end();
+});
+
+
+*/
